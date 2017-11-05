@@ -25,6 +25,7 @@ export class BackendService {
   baseUrl: string;
   constructor(private hc: HttpClient){
     this.baseUrl = environment.http.baseUrl;
+    console.log(environment);
   }
 
   ngOnInit(): void {
