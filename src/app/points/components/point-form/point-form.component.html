@@ -1,0 +1,10 @@
+<form 
+  [formGroup]="pointsForm" 
+  (ngSubmit)="onSubmit()"
+  novalidate >
+  <input class="form-control" formControlName="x_input">
+  <input class="form-control" formControlName="y_input">
+  <p>Form value: {{pointsForm.value | json}} </p>
+  <p>Form value: {{pointsForm.status | json}} </p>
+  <button type="submit" class="btn btn-success">Add Point</button>
+</form>
