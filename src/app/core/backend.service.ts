@@ -110,7 +110,7 @@ export class BackendService {
   }
 
   addPoint(xCoor: Number, yCoor: Number){
-    return this.executeRequest(httpMethods.POST,`${this.baseUrl}/addPoint`,false,{
+    return this.executeRequest(httpMethods.POST,`${this.baseUrl}addPoint`,false,{
       body: {x_coordinates: xCoor,y_coordinates: yCoor}
     });
   //  this.hc.post('http://localhost:5000/addPoint',{x_coordinates: xCoor,y_coordinates: yCoor}).subscribe();
