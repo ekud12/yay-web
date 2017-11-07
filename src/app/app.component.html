@@ -1,7 +1,13 @@
-<div class="container">
-    <app-logo></app-logo>
-    <app-point-form></app-point-form>
+<div class="container-fluid" [ngSwitch]="loading">
+  <app-button (introSkipped)="isClicked()" *ngSwitchCase="true" [@fadeIntroButtonTrigger]></app-button>
+  <div *ngSwitchCase="false" [@fadeComponentTrigger]>
+      <app-point-form></app-point-form>
+  </div>
 </div>
+<!-- <div class="container-fluid">
 
+      <router-outlet></router-outlet>   
+</div>
+   -->
 
 

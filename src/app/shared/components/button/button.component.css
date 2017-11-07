@@ -1,19 +1,28 @@
-a{
+:host {
   display: block;
+}
+
+.row{
+ margin-top: 50vh;
+}
+
+.entry-btn{
+  display: block;
+  text-shadow: 2px 2px grey;
   width: 150px;
   line-height: 40px;
   text-align: center;
   position: relative;
   text-decoration: none;
-  color: #fff;
-  font-size: 15px;
+  color:white;
+  font-size: 20xp;
   font-weight: 5000;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-a:before,
-a:after{
+.entry-btn:before,
+.entry-btn:after{
   cursor: pointer;
   position: absolute;
   content: "";
@@ -21,9 +30,9 @@ a:after{
   
 }
 
-a:before{
-  border-bottom: 2px solid #FF0095;
-  border-left: 2px solid #FF0095;
+.entry-btn:before{
+  border-bottom: 2px solid rgb(255, 115, 0);
+  border-left: 2px solid rgb(255, 115, 0);
   width: 10%;
   height: 33%;
   left: -10px;
@@ -31,28 +40,29 @@ a:before{
 
 }
 
-a:after{
-  border-top: 2px solid #FF0095;
-  border-right: 2px solid #FF0095;
+.entry-btn:after{
+  border-top: 2px solid rgb(255, 115, 0);
+  border-right: 2px solid rgb(255, 115, 0);
   width: 10%;
   height: 33%;
   top: -10px;
   right: -10px;
   
 }
-a:hover{
-  color: black;
-  background: #FF0095;
+.entry-btn:hover{
+  text-shadow: 0px 0px grey;
+  color:black;
+  background: rgb(255, 115, 0);
   transition: all .5s;
 }
 
-a:hover:before{
-  width: 112%;
-  height: 140%;
+.entry-btn:hover:before{
+  width: 113%;
+  height: 144%;
 }
 
-a:hover:after{
-  width: 112%;
-  height: 140%;
+.entry-btn:hover:after{
+  width: 113%;
+  height: 144%;
 }
 
