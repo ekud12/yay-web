@@ -16,9 +16,7 @@ export class ButtonComponent implements OnInit {
   @Output() introSkipped :EventEmitter<boolean> = new EventEmitter();
 
   myStyle: object = {};
-  myStyle2: object = {};
   myParams: object = {};
-  myParams2: object = {};
   width: number = 100;
   height: number = 100;
 
@@ -27,7 +25,7 @@ export class ButtonComponent implements OnInit {
     this.myStyle = {
       'position': 'fixed',
       'width': '100%',
-      'height': '50%',
+      'height': '100%',
       'z-index': -1,
       'top': 0,
       'left': 0,
@@ -35,16 +33,6 @@ export class ButtonComponent implements OnInit {
       'bottom': 0
   };
 
-  this.myStyle2 = {
-    'position': 'fixed',
-    'width': '100%',
-    'height': '50%',
-    'z-index': -1,
-    'top': 50,
-    'left': 0,
-    'right': 0,
-    'bottom': 0
-};
 
 this.myParams = {
       particles: {
@@ -61,7 +49,7 @@ this.myParams = {
             value: 0.55,
           },
           size: {
-            "value": 3,
+            "value": 2,
             "random": true,
             "anim": {
               "enable": false,
@@ -72,13 +60,13 @@ this.myParams = {
           },
           line_linked: {
             "enable": true,
-            "distance": 70,          
-            "opacity": 0.4,  
+            "distance": 85,          
+            "opacity": 0.3,  
           },
           move: {
             "enable": true,
-            "speed": 3,
-            "direction": "top",
+            "speed": 5,
+            "direction": "none",
             "random": false,
             "straight": false,
             "out_mode": "out",
@@ -89,54 +77,9 @@ this.myParams = {
               "rotateY": 1200
             }
           }
-  }
-};
+    }
+  };
 
-this.myParams2 = {
-  particles: {
-      number: {
-          value: 200,
-      },
-      color: {
-          value: '#ff870f'
-      },
-      shape: {
-          type: 'triangle'
-      },
-      opacity: {
-        value: 0.55,
-      },
-      size: {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 80,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      line_linked: {
-        "enable": true,
-        "distance": 70,          
-        "opacity": 0.4,  
-      },
-      move: {
-        "enable": true,
-        "speed": 3,
-        "direction": "bottom",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "bounce": false,
-        "attract": {
-          "enable": true,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-}
-};
   }
 
   enter(){
