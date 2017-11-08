@@ -27,7 +27,7 @@ export class ButtonComponent implements OnInit {
     this.myStyle = {
       'position': 'fixed',
       'width': '100%',
-      'height': '35%',
+      'height': '50%',
       'z-index': -1,
       'top': 0,
       'left': 0,
@@ -38,7 +38,7 @@ export class ButtonComponent implements OnInit {
   this.myStyle2 = {
     'position': 'fixed',
     'width': '100%',
-    'height': '35%',
+    'height': '50%',
     'z-index': -1,
     'top': 50,
     'left': 0,
