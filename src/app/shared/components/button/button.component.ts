@@ -27,7 +27,7 @@ export class ButtonComponent implements OnInit {
     this.myStyle = {
       'position': 'fixed',
       'width': '100%',
-      'height': '40%',
+      'height': '35%',
       'z-index': -1,
       'top': 0,
       'left': 0,
@@ -38,7 +38,7 @@ export class ButtonComponent implements OnInit {
   this.myStyle2 = {
     'position': 'fixed',
     'width': '100%',
-    'height': '40%',
+    'height': '35%',
     'z-index': -1,
     'top': 50,
     'left': 0,
@@ -72,12 +72,12 @@ this.myParams = {
           },
           line_linked: {
             "enable": true,
-            "distance": 80,          
+            "distance": 70,          
             "opacity": 0.4,  
           },
           move: {
             "enable": true,
-            "speed": 1,
+            "speed": 3,
             "direction": "top",
             "random": false,
             "straight": false,
@@ -118,12 +118,12 @@ this.myParams2 = {
       },
       line_linked: {
         "enable": true,
-        "distance": 80,          
+        "distance": 70,          
         "opacity": 0.4,  
       },
       move: {
         "enable": true,
-        "speed": 1,
+        "speed": 3,
         "direction": "bottom",
         "random": false,
         "straight": false,
