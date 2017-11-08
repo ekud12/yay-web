@@ -35,14 +35,32 @@ export class ButtonComponent implements OnInit {
 this.myParams = {
       particles: {
           number: {
-              value: 200,
+              value: 100,
           },
           color: {
-              value: '#ff0000'
+              value: '#ff870f'
           },
           shape: {
-              type: 'triangle',
+              type: 'triangle'
           },
+          opacity: {
+            value: 0.55,
+          },
+          size: {
+            "value": 3,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 80,
+              "size_min": 0.1,
+              "sync": false
+            }
+          },
+          line_linked: {
+            "enable": true,
+            "distance": 75,          
+            "opacity": 0.5,  
+          } 
   }
 };
   }
