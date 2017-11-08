@@ -16,15 +16,18 @@ export class ButtonComponent implements OnInit {
   @Output() introSkipped :EventEmitter<boolean> = new EventEmitter();
 
   myStyle: object = {};
+  myStyle2: object = {};
   myParams: object = {};
+  myParams2: object = {};
   width: number = 100;
   height: number = 100;
+
   ngOnInit () {
     this.enterText = 'Welcome';
     this.myStyle = {
       'position': 'fixed',
       'width': '100%',
-      'height': '100%',
+      'height': '40%',
       'z-index': -1,
       'top': 0,
       'left': 0,
@@ -32,10 +35,21 @@ export class ButtonComponent implements OnInit {
       'bottom': 0
   };
 
+  this.myStyle2 = {
+    'position': 'fixed',
+    'width': '100%',
+    'height': '46%',
+    'z-index': -1,
+    'top': 50,
+    'left': 0,
+    'right': 0,
+    'bottom': 0
+};
+
 this.myParams = {
       particles: {
           number: {
-              value: 100,
+              value: 130,
           },
           color: {
               value: '#ff870f'
@@ -58,10 +72,70 @@ this.myParams = {
           },
           line_linked: {
             "enable": true,
-            "distance": 75,          
-            "opacity": 0.5,  
-          } 
+            "distance": 90,          
+            "opacity": 0.4,  
+          },
+          move: {
+            "enable": true,
+            "speed": 2,
+            "direction": "top",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+              "enable": true,
+              "rotateX": 600,
+              "rotateY": 1200
+            }
+          }
   }
+};
+
+this.myParams2 = {
+  particles: {
+      number: {
+          value: 130,
+      },
+      color: {
+          value: '#ff870f'
+      },
+      shape: {
+          type: 'triangle'
+      },
+      opacity: {
+        value: 0.55,
+      },
+      size: {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 80,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      line_linked: {
+        "enable": true,
+        "distance": 90,          
+        "opacity": 0.4,  
+      },
+      move: {
+        "enable": true,
+        "speed": 2,
+        "direction": "bottom",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": true,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+}
 };
   }
 
