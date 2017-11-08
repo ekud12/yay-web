@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './components/button/button.component';
+import { IntroComponent } from './components/button/button.component';
 import { PointsToolComponent } from './components/logo/button.component';
 import { RoutingModule } from '../routing/routing.module';
 import { ParticlesModule } from 'angular-particle';
@@ -11,7 +11,7 @@ import { ParticlesModule } from 'angular-particle';
     RoutingModule,
     ParticlesModule 
   ],
-  declarations: [ButtonComponent, PointsToolComponent],
-  exports: [ButtonComponent, PointsToolComponent]
+  declarations: [IntroComponent, PointsToolComponent],
+  exports: [IntroComponent, PointsToolComponent]
 })
 export class SharedModule { }

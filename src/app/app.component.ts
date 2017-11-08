@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FADE_ANIMATION, FADE_ANIMATION_BUTTON } from '../app/shared/animations/on-off.animation';
+import { FADE_ANIMATION, FADE_ANIMATION_BUTTON } from '../app/shared/animations/animations';
 import { Router } from '@angular/router';
 import { SharedRouterService } from '../app/routing/routerService';
 

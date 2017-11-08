@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { ON_OFF_ANIMATION } from '../../animations/on-off.animation';
+import { ON_OFF_ANIMATION } from '../../animations/animations';
 import { BackendService } from '../../../core/backend.service';
 import { Observable } from 'rxjs/Observable';
 import { Point } from '../../models/point';

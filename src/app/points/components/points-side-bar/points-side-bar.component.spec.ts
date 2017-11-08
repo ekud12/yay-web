@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IntroComponent } from './button.component';
+import { PointsSideBarComponent } from './points-side-bar.component';
 
-describe('ButtonComponent', () => {
-  let component: IntroComponent;
-  let fixture: ComponentFixture<IntroComponent>;
+describe('PointsSideBarComponent', () => {
+  let component: PointsSideBarComponent;
+  let fixture: ComponentFixture<PointsSideBarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IntroComponent ]
+      declarations: [ PointsSideBarComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IntroComponent);
+    fixture = TestBed.createComponent(PointsSideBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

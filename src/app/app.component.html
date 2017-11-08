@@ -1,7 +1,7 @@
 <div class="container-fluid" [ngSwitch]="loading">
-  <app-button (introSkipped)="isClicked()" *ngSwitchCase="true" [@fadeIntroButtonTrigger]></app-button>
-  <div *ngSwitchCase="false" [@fadeComponentTrigger]>
-      <app-point-form></app-point-form>
+  <app-intro (introSkipped)="isClicked()" *ngSwitchCase="true" [@fadeIntroButtonTrigger]></app-intro>
+  <div *ngSwitchCase="false">
+      <app-points-side-bar></app-points-side-bar>
   </div>
 </div>
 <!-- <div class="container-fluid">
