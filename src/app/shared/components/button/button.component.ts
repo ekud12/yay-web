@@ -38,7 +38,7 @@ export class ButtonComponent implements OnInit {
   this.myStyle2 = {
     'position': 'fixed',
     'width': '100%',
-    'height': '46%',
+    'height': '40%',
     'z-index': -1,
     'top': 50,
     'left': 0,
@@ -49,7 +49,7 @@ export class ButtonComponent implements OnInit {
 this.myParams = {
       particles: {
           number: {
-              value: 130,
+              value: 200,
           },
           color: {
               value: '#ff870f'
@@ -72,12 +72,12 @@ this.myParams = {
           },
           line_linked: {
             "enable": true,
-            "distance": 90,          
+            "distance": 80,          
             "opacity": 0.4,  
           },
           move: {
             "enable": true,
-            "speed": 2,
+            "speed": 1,
             "direction": "top",
             "random": false,
             "straight": false,
@@ -95,7 +95,7 @@ this.myParams = {
 this.myParams2 = {
   particles: {
       number: {
-          value: 130,
+          value: 200,
       },
       color: {
           value: '#ff870f'
@@ -118,12 +118,12 @@ this.myParams2 = {
       },
       line_linked: {
         "enable": true,
-        "distance": 90,          
+        "distance": 80,          
         "opacity": 0.4,  
       },
       move: {
         "enable": true,
-        "speed": 2,
+        "speed": 1,
         "direction": "bottom",
         "random": false,
         "straight": false,
