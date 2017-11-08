@@ -48,21 +48,21 @@ trigger('fadeIntroButtonTrigger', [
   transition('* => void', [
     style({
       opacity: '1',
-      transform: ' scale(1)'
+
     }),
     animate('400ms ease-in', style({
       opacity: '0',
-      transform: ' scale(0.6)'
+
     }))
   ]),
   transition('void => *', [
     style({
       opacity: '0',
-      transform: ' scale(0.6)'
+
     }),
     animate('400ms ease-in', style({
       opacity: '1',
-      transform: ' scale(1)'
+
     }))
   ])
 ])
