@@ -19,26 +19,51 @@ trigger('fadeComponentTrigger', [
   transition('void <=> *', animate('1s 400ms ease-in' )),
 ]);
 
+// export const FADE_ANIMATION_BUTTON =
+// trigger('fadeIntroButtonTrigger', [
+//   transition('* => void', [
+//     style({
+//       opacity: '1',
+//       transform: 'translateY(0) scale(1)'
+//     }),
+//     animate('400ms ease-in', style({
+//       opacity: '0',
+//       transform: 'translateY(-300%) scale(0.1)'
+//     }))
+//   ]),
+//   transition('void => *', [
+//     style({
+//       opacity: '0',
+//       transform: 'translateY(-300%) scale(0.1)'
+//     }),
+//     animate('400ms ease-in', style({
+//       opacity: '1',
+//       transform: 'translateY(0) scale(1)'
+//     }))
+//   ])
+// ])
+
 export const FADE_ANIMATION_BUTTON =
 trigger('fadeIntroButtonTrigger', [
   transition('* => void', [
     style({
       opacity: '1',
-      transform: 'translateY(0) scale(1)'
+      transform: ' scale(1)'
     }),
     animate('400ms ease-in', style({
       opacity: '0',
-      transform: 'translateY(-300%) scale(0.1)'
+      transform: ' scale(0.6)'
     }))
   ]),
   transition('void => *', [
     style({
       opacity: '0',
-      transform: 'translateY(-300%) scale(0.1)'
+      transform: ' scale(0.6)'
     }),
     animate('400ms ease-in', style({
       opacity: '1',
-      transform: 'translateY(0) scale(1)'
+      transform: ' scale(1)'
     }))
   ])
 ])
+

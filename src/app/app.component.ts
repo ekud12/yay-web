@@ -16,10 +16,11 @@ export class AppComponent implements OnInit {
 
   title = 'app';
   loading = true;
-  color = 'magenta';
+  appLoaded = false;
+  color = 'orange';
 
   ngOnInit() {
-    // this.loading = false;
+    this.appLoaded = true;
     // setTimeout(()=> this.loading = false,5000);
   }
 
