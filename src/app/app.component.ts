@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
   color = 'orange';
 
   ngOnInit() {
-    this.appLoaded = true;
-    // setTimeout(()=> this.loading = false,5000);
+    // this.appLoaded = true;
+    setTimeout(()=> this.appLoaded = true,5000);
   }
 
   isClicked() {

@@ -4,7 +4,7 @@
         <app-intro (introSkipped)="isClicked()" ></app-intro>
     </div>
   </div>
-  <div *ngSwitchCase="false">
+  <div *ngSwitchCase="false"  [@fadeComponentTrigger]>
       <app-points-side-bar></app-points-side-bar>
   </div>
 </div>

@@ -15,6 +15,8 @@ export const AppRoutes: Routes = [
     {
       path: 'second',
       component: PointFormComponent
+    },
+    { path: '**', 
+      component: IntroComponent 
     }
-    // { path: '**', component: PageNotFoundComponent }
 ];
