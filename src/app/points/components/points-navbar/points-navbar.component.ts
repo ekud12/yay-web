@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FADE_ANIMATION } from '../../../shared/animations/animations';
+import { FADE_ANIMATION ,NAVBAR_STAGGER_BUTTONS} from '../../../shared/animations/animations';
 
 @Component({
   selector: 'app-points-side-bar',
   templateUrl: './points-navbar.component.html',
   styleUrls: ['./points-navbar.component.css'],
-  animations: [FADE_ANIMATION]
+  animations: [FADE_ANIMATION, NAVBAR_STAGGER_BUTTONS]
 })
 
 export class PointsSideBarComponent implements OnInit {
-
+  buttons  = ['about','profile','showcase','pointmaker','exit'];
   particlesStyle: object = {};
   particlesParams: object = {};
   constructor() { }
@@ -23,7 +23,6 @@ export class PointsSideBarComponent implements OnInit {
       'left': 0,
       'right': 0,
       'bottom': 0,
-      // 'z-index': -1    
     };
 
     this.particlesParams = {
@@ -38,7 +37,7 @@ export class PointsSideBarComponent implements OnInit {
                   type: 'circle'
               },
               opacity: {
-                value: 0.6,
+                value: 0.8,
               },
               size: {
                 'value': 1,

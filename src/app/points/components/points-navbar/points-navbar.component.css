@@ -25,9 +25,9 @@
   -webkit-transform: scaleX(0.0001);
   -ms-transform: scaleX(0.0001);
   transform: scaleX(0.0001);
-  animation: 1s cubic-bezier(.87,.14,.89,.73) 1s expand forwards;
-  -moz-animation: 1s cubic-bezier(.87,.14,.89,.73) 1s expand forwards;
-  -webkit-animation: 1s cubic-bezier(.87,.14,.89,.73) 1s expand forwards;
+  animation: 1s cubic-bezier(.87,.14,.89,.73) 0.6s expand forwards;
+  -moz-animation: 1s cubic-bezier(.87,.14,.89,.73) 0.6s expand forwards;
+  -webkit-animation: 1s cubic-bezier(.87,.14,.89,.73) 0.6s expand forwards;
 }
 
 .side-bar::before {

@@ -5,6 +5,7 @@ import { PointsToolComponent } from './components/logo/button.component';
 import { RoutingModule } from '../routing/routing.module';
 import { ParticlesModule } from 'angular-particle';
 import { NavbarButtonComponent } from '../shared/components/ui/navbar-button/navbar-button.component';
+import { BigLogoComponent } from '../shared/components/ui/big-logo/big-logo.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { NavbarButtonComponent } from '../shared/components/ui/navbar-button/nav
     RoutingModule,
     ParticlesModule 
   ],
-  declarations: [IntroComponent, PointsToolComponent, NavbarButtonComponent],
-  exports: [IntroComponent, PointsToolComponent, NavbarButtonComponent]
+  declarations: [IntroComponent, PointsToolComponent, NavbarButtonComponent, BigLogoComponent],
+  exports: [IntroComponent, PointsToolComponent, NavbarButtonComponent,BigLogoComponent]
 })
 export class SharedModule { }

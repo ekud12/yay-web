@@ -1,4 +1,4 @@
-import { animate, state, style, transition, trigger, keyframes } from '@angular/animations';
+import { animate, state, style, transition, trigger, keyframes, query, stagger } from '@angular/animations';
 
 export const ON_OFF_ANIMATION =
 trigger('onOffTrigger', [
@@ -20,6 +20,17 @@ trigger('fadeComponentTrigger', [
 ]);
 
 export const NAVBAR_BUTTON_EFFECT =
+trigger('navbarButtontrigger', [
+  state('notInReach', style({
+    color: '#bcbcbc'
+  })),
+  state('inReach', style({
+    color: 'white'
+  })),
+  transition('notInReach <=> inReach', animate('150ms ease-in' )),
+]);
+
+export const NAVBAR_SVG_EFFECT =
 trigger('navbarSVGtrigger', [
   state('notInReach', style({
     transform : 'translateY(-100%)',
@@ -27,11 +38,23 @@ trigger('navbarSVGtrigger', [
   })),
   state('inReach', style({
     transform : 'translateY(-30%)',
-    opacity: '1'
+    opacity: '0.8'
   })),
-  transition('notInReach <=> inReach', animate('300ms ease-in' )),
+  transition('notInReach <=> inReach', animate('150ms ease-in' )),
 ]);
 
+export const NAVBAR_STAGGER_BUTTONS =
+trigger('listAnimation', [
+  transition('* => *', [
+    // this hides everything right away
+    query('.col', style({ opacity: 0 })),
+    // starts to animate things with a stagger in between
+    animate('2s'),
+    query('.col', stagger('200ms', [
+      animate('0.1s', style({ opacity: 1 })),
+    ]))
+  ])
+])
 
 
 export const FADE_ANIMATION_BUTTON =
@@ -54,3 +77,22 @@ trigger('fadeIntroButtonTrigger', [
   ])
 ])
 
+export const LOGO_LEFT_ANIMATION =
+trigger('logoLeftAnimationTrigger', [
+  state('Hovered', style({ transform: 'translateX(3%) translateY(-2%)',fill: '#FFA500'})),
+  state('notHovered', style({ transform: 'translateX(0)'})),
+  transition('notHovered <=> Hovered', animate('300ms ease-in'))
+])
+
+export const LOGO_RIGHT_ANIMATION =
+trigger('logoRightAnimationTrigger', [
+  state('Hovered', style({ transform: 'translateX(-4%)',fill: '#FFA500'})),
+  state('notHovered', style({ transform: 'translateX(0)'})),
+  transition('notHovered <=> Hovered', animate('300ms ease-in'))
+])
+export const LOGO_BOTTOM_ANIMATION =
+trigger('logoBottomAnimationTrigger', [
+  state('Hovered', style({ transform: 'translateY(8%) translateX(1%)',fill: '#FFA500'})),
+  state('notHovered', style({ transform: 'translateY(0)'})),
+  transition('notHovered <=> Hovered', animate('300ms ease-in'))
+])
