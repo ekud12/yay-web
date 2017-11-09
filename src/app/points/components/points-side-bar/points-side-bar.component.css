@@ -3,29 +3,51 @@
 }
 .side-bar {
   position: relative;
-  height: 100vh;
-  width: 30%;
+  height: 10vh;
+  width: 100%;
   color:darkgray;
-  background-color: darkgray;
+  background-color: rgb(22, 22, 22);  
+  border-bottom: 0px solid rgba(255, 255, 255, 0.74);
   margin-left: 0px;
-
 }
 
 .side-bar::after {
+  z-index: -10;
   content: '';
   position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 100%;
+  bottom: 0;
+  opacity: 1;
+  border-bottom: 1px solid rgb(121, 121, 121);
+  -webkit-transform: scaleX(0.0001);
+  -ms-transform: scaleX(0.0001);
+  transform: scaleX(0.0001);
+  animation: 1s cubic-bezier(.87,.14,.89,.73) 1s expand forwards;
+  -moz-animation: 1s cubic-bezier(.87,.14,.89,.73) 1s expand forwards;
+  -webkit-animation: 1s cubic-bezier(.87,.14,.89,.73) 1s expand forwards;
+}
+
+.side-bar::before {
+  z-index: -10;
+  content: '';
+  position: absolute;
+  display: block;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   opacity: 0;
-  -webkit-box-shadow: 44px 0px 59px 1px rgba(64,64,64,0.89);
-  -moz-box-shadow: 44px 0px 59px 1px rgba(64,64,64,0.89);
-  box-shadow: 44px 0px 59px 1px rgba(64,64,64,0.89);
-  animation: 3s linear 0.5s opacityShadow forwards;
-  -moz-animation: 3s linear 0.5s opacityShadow forwards;
-  -webkit-animation: 3s linear 0.5s opacityShadow forwards;
+  -webkit-box-shadow: 0px 1px 27px -2px rgba(0,0,0,0.83);
+  -moz-box-shadow: 0px 1px 27px -2px rgba(0,0,0,0.83);
+  box-shadow: 0px 1px 27px -2px rgba(0,0,0,0.83);
+  animation: 2s linear 1s opacityShadow forwards;
+  -moz-animation: 2s linear 1s opacityShadow forwards;
+  -webkit-animation: 2s linear 1s opacityShadow forwards;
 }
+
 
 @keyframes opacityShadow {
   from {
@@ -52,5 +74,33 @@
   to {
     opacity: 1;
   }
+} 
+
+@keyframes expand {
+  from {
+    transform: scale(0.001);
+  }
+  to {
+    transform: scale(1);
+  }
 }
+
+@-webkit-keyframes expand {
+  from {
+    transform: scale(0.001);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@-moz-keyframes opacityShadow {
+  from {
+    transform: scale(0.001);
+  }
+  to {
+    transform: scale(1);
+  }
+} 
+
 
