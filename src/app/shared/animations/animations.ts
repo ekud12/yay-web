@@ -19,6 +19,20 @@ trigger('fadeComponentTrigger', [
   transition('void <=> *', animate('.5s 600ms ease-in' )),
 ]);
 
+export const NAVBAR_BUTTON_EFFECT =
+trigger('navbarSVGtrigger', [
+  state('notInReach', style({
+    transform : 'translateY(-100%)',
+    opacity: '0'
+  })),
+  state('inReach', style({
+    transform : 'translateY(-30%)',
+    opacity: '1'
+  })),
+  transition('notInReach <=> inReach', animate('300ms ease-in' )),
+]);
+
+
 
 export const FADE_ANIMATION_BUTTON =
 trigger('fadeIntroButtonTrigger', [

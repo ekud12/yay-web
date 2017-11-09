@@ -1,3 +1,37 @@
-.triangle:hover {
-  fill: white;
+
+.iconx{ 
+  height: 40px;
+  width: 70px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.triangle {
+  fill: red;
+  transform: translateY(-200%);
+}
+
+.iconx:hover .triangle {
+  animation: ease-in .25s addsvg forwards;
+
+  -webkit-animation: ease-out .25s addsvg forwards;
+}
+
+@keyframes addsvg {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes addsvg {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
