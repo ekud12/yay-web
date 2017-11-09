@@ -3,8 +3,8 @@ import { FADE_ANIMATION } from '../../../shared/animations/animations';
 
 @Component({
   selector: 'app-points-side-bar',
-  templateUrl: './points-side-bar.component.html',
-  styleUrls: ['./points-side-bar.component.css'],
+  templateUrl: './points-navbar.component.html',
+  styleUrls: ['./points-navbar.component.css'],
   animations: [FADE_ANIMATION]
 })
 

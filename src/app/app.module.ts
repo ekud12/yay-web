@@ -18,7 +18,7 @@ import { NgSpinKitModule } from 'ng-spin-kit';
   imports: [
     BrowserModule,
     CoreModule,
-   RoutingModule,
+    RoutingModule,
     BrowserAnimationsModule,
     SharedModule,
     PointsModule,
