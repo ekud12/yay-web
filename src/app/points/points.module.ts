@@ -6,16 +6,19 @@ import { PointFormComponent } from '../points/components/point-form/point-form.c
 import { PointsSideBarComponent } from '../points/components/points-navbar/points-navbar.component';
 import { SharedModule } from '../shared/shared.module';
 import { ParticlesModule } from 'angular-particle';
+import { MainViewComponent } from '../points/components/main-view/main-view.component';
+import { RoutingModule } from '../routing/routing.module';
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
+    RoutingModule,
     FormsModule,
     ParticlesModule,
     ReactiveFormsModule
   ],
   providers: [PointService],
-  declarations: [PointFormComponent, PointsSideBarComponent],
-  exports:[PointFormComponent, PointsSideBarComponent]
+  declarations: [PointFormComponent, PointsSideBarComponent, MainViewComponent],
+  exports:[PointFormComponent, PointsSideBarComponent,MainViewComponent]
 })
 export class PointsModule { }

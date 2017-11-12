@@ -23,19 +23,19 @@ export const NAVBAR_BUTTON_SELECTED =
 trigger('navbarButtonSelectedTrigger', [
   state('notSelected', style({})),
   state('about', style({
-    borderBottom:'1px solid blue',
+    borderBottom:'2px solid blue',
   })),
   state('showcase', style({
-    borderBottom:'1px solid orange',
+    borderBottom:'2px solid orange',
   })),
   state('pointer', style({
-    borderBottom:'1px solid yellow',
+    borderBottom:'2px solid yellow',
   })),
   state('home', style({
-    borderBottom:'1px solid green',
+    borderBottom:'2px solid green',
   })),
   state('profile', style({
-    borderBottom:'1px solid red',
+    borderBottom:'2px solid red',
   })),
   transition('* <=> *', animate('400ms ease-in' )),
 ]);

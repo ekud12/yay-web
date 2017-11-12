@@ -8,7 +8,10 @@
             <div class="col-9">
                 <div class="row no-gutters" [@listAnimation]="buttons.length">
                     <div class="col col-xs-1 center" *ngFor="let nvb of buttons" (click)="redirect(nvb)">
-                        <app-navbar-button [isClicked]="buttonClicked" [color]=nvb.color [button_text]=nvb.text></app-navbar-button>
+                      <a routerLink="/{{nvb.text}}">
+                        <app-navbar-button [isClicked]="buttonClicked" [color]=nvb.color [button_text]=nvb.text>
+                          </app-navbar-button>  </a>
+                        |                    
                     </div>
                 </div>
             </div>

@@ -18,8 +18,6 @@ export class IntroComponent implements OnInit {
 
   particlesStyle: object = {};
   particlesParams: object = {};
-  width: number = 100;
-  height: number = 100;
 
   ngOnInit () {
     this.introButtonText = 'WELCOME';

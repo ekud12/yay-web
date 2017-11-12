@@ -2,17 +2,14 @@
 .iconx{ 
   cursor: pointer;
   height: 50px;
-
-  font-size: 16px;
+  font-size: 18px;
   font-family: 'Montserrat', sans-serif;
   color: white;
   justify-content: center;
+  padding-top: 15px;
 }
 
 .iconx .svg {
   display: block;
   margin-bottom: 0 auto;
-}
-
-.iconx .span {
 }

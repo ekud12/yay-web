@@ -26,5 +26,6 @@ export class AppComponent implements OnInit {
 
   isClicked() {
     this.loading = false;
+    this.router.navigateByUrl("about");
   }
 }

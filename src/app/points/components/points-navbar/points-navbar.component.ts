@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FADE_ANIMATION ,NAVBAR_STAGGER_BUTTONS, NAVBAR_BUTTON_SELECTED} from '../../../shared/animations/animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-points-side-bar',
@@ -19,13 +20,14 @@ export class PointsSideBarComponent implements OnInit {
   particlesParams: object = {};
   buttonClicked = 'notSelected';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.router.events.subscribe(event => console.log(event));
     this.particlesStyle = {
       'position': 'fixed',
       'width': '100%',
-      'height': '10vh',
+      'height': '8vh',
       'top': 0,
       'left': 0,
       'right': 0,
