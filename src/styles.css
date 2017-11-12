@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../src/assets/bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Josefin+Sans|Righteous|Arvo');
 
 body {
   font:normal 75% Arial, Helvetica, sans-serif;
@@ -41,7 +41,7 @@ body {
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: orange;
+    background-color: rgb(61, 61, 61);
     border-radius: 100%;
     -webkit-animation: sk-chasingDotsBounce 2s infinite ease-in-out;
             animation: sk-chasingDotsBounce 2s infinite ease-in-out; }

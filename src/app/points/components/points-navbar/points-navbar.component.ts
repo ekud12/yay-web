@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
 })
 
 export class PointsSideBarComponent implements OnInit {
-  buttons  = [{text:'about',color:'blue'},
-              {text:'profile',color:'red'},
-              {text:'showcase',color:'orange'},
-              {text:'pointer',color:'yellow'},
-              {text:'home',color:'green'}];
+  buttons  = [{text:'About',color:'#38c3ff'},
+              {text:'Profile',color:'#ff366c'},
+              {text:'Showcase',color:'orange'},
+              {text:'Pointer',color:'yellow'},
+              {text:'Home',color:'#39ffcd'}];
   id = 0;
   particlesStyle: object = {};
   particlesParams: object = {};

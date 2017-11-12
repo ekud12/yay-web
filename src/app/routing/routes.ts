@@ -23,7 +23,7 @@ export const AppRoutes: Routes = [
     },
     {
       path: 'pointer',
-      component: BigLogoComponent
+      component: PointFormComponent
     },
     {
       path: '',

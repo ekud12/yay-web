@@ -23,7 +23,7 @@ export const NAVBAR_BUTTON_SELECTED =
 trigger('navbarButtonSelectedTrigger', [
   state('notSelected', style({})),
   state('about', style({
-    borderBottom:'2px solid blue',
+    borderBottom:'2px solid #38c3ff',
   })),
   state('showcase', style({
     borderBottom:'2px solid orange',
@@ -32,10 +32,10 @@ trigger('navbarButtonSelectedTrigger', [
     borderBottom:'2px solid yellow',
   })),
   state('home', style({
-    borderBottom:'2px solid green',
+    borderBottom:'2px solid #39ffcd',
   })),
   state('profile', style({
-    borderBottom:'2px solid red',
+    borderBottom:'2px solid #ff366c',
   })),
   transition('* <=> *', animate('400ms ease-in' )),
 ]);
@@ -43,10 +43,10 @@ trigger('navbarButtonSelectedTrigger', [
 export const NAVBAR_BUTTON_EFFECT =
 trigger('navbarButtontrigger', [
   state('notInReach', style({
-    color: '#bcbcbc'
+    color: 'rgb(102, 102, 102)'
   })),
   state('inReach', style({
-    color: 'white'
+    color: 'black'
   })),
   state('clicked', style({
     color: "{{newColor}}"

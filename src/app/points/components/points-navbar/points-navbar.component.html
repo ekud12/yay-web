@@ -1,21 +1,22 @@
 <div class="row" [@navbarButtonSelectedTrigger]="buttonClicked">
     <div class="side-bar">
-        <particles [style]="particlesStyle" [params]="particlesParams"> </particles>
+        <!-- <particles [style]="particlesStyle" [params]="particlesParams"> </particles> -->
         <div class="row no-gutters">
-            <div class="col-2 col-xs-2 d-flex justify-content-center">
+            <div class="col-3 col-xs-2 d-flex justify-content-center">
                 <app-big-logo></app-big-logo>
             </div>
-            <div class="col-9">
+            <div class="col-5">
                 <div class="row no-gutters" [@listAnimation]="buttons.length">
                     <div class="col col-xs-1 center" *ngFor="let nvb of buttons" (click)="redirect(nvb)">
                       <a routerLink="/{{nvb.text}}">
                         <app-navbar-button [isClicked]="buttonClicked" [color]=nvb.color [button_text]=nvb.text>
                           </app-navbar-button>  </a>
-                        |                    
-                    </div>
+                                          
+                    </div>             
                 </div>
             </div>
-            <div class="col-1">
+            <div class="col-3 d-flex justify-content-center">
+              Search
             </div>
         </div>
     </div>

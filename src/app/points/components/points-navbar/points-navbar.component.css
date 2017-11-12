@@ -1,12 +1,17 @@
 :host {
   display: block;
 }
+
+a{
+  text-decoration: none !important;
+}
 .side-bar {
   position: relative;
   height: 8vh;
   width: 100%;
-  color:darkgray;
-  background-color: rgb(22, 22, 22);  
+  color:rgb(63, 63, 63);
+  background: url('../../../../assets/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
+  /* background-color: rgb(235, 235, 235);   */
   border-bottom: 0px solid rgba(255, 255, 255, 0.74);
   margin-left: 0px;
 }
