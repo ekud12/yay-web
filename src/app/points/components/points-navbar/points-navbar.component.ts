@@ -1,17 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { FADE_ANIMATION ,NAVBAR_STAGGER_BUTTONS} from '../../../shared/animations/animations';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FADE_ANIMATION ,NAVBAR_STAGGER_BUTTONS, NAVBAR_BUTTON_SELECTED} from '../../../shared/animations/animations';
 
 @Component({
   selector: 'app-points-side-bar',
   templateUrl: './points-navbar.component.html',
   styleUrls: ['./points-navbar.component.css'],
-  animations: [FADE_ANIMATION, NAVBAR_STAGGER_BUTTONS]
+  animations: [FADE_ANIMATION, NAVBAR_STAGGER_BUTTONS, NAVBAR_BUTTON_SELECTED]
 })
 
 export class PointsSideBarComponent implements OnInit {
-  buttons  = ['about','profile','showcase','pointmaker','exit'];
+  buttons  = [{text:'about',color:'blue'},
+              {text:'profile',color:'red'},
+              {text:'showcase',color:'orange'},
+              {text:'pointer',color:'yellow'},
+              {text:'home',color:'green'}];
+  id = 0;
   particlesStyle: object = {};
   particlesParams: object = {};
+  buttonClicked = 'notSelected';
+
   constructor() { }
 
   ngOnInit() {
@@ -109,7 +116,10 @@ export class PointsSideBarComponent implements OnInit {
               }
             },            
         }
-      };
- }
+      }
 
-
+      redirect(a: any){
+      this.id = a.text;
+      this.buttonClicked = a.text;
+    }
+  }

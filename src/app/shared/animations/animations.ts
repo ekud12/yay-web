@@ -19,6 +19,27 @@ trigger('fadeComponentTrigger', [
   transition('void <=> *', animate('.5s 600ms ease-in' )),
 ]);
 
+export const NAVBAR_BUTTON_SELECTED =
+trigger('navbarButtonSelectedTrigger', [
+  state('notSelected', style({})),
+  state('about', style({
+    borderBottom:'1px solid blue',
+  })),
+  state('showcase', style({
+    borderBottom:'1px solid orange',
+  })),
+  state('pointer', style({
+    borderBottom:'1px solid yellow',
+  })),
+  state('home', style({
+    borderBottom:'1px solid green',
+  })),
+  state('profile', style({
+    borderBottom:'1px solid red',
+  })),
+  transition('* <=> *', animate('400ms ease-in' )),
+]);
+
 export const NAVBAR_BUTTON_EFFECT =
 trigger('navbarButtontrigger', [
   state('notInReach', style({
@@ -27,7 +48,10 @@ trigger('navbarButtontrigger', [
   state('inReach', style({
     color: 'white'
   })),
-  transition('notInReach <=> inReach', animate('150ms ease-in' )),
+  state('clicked', style({
+    color: "{{newColor}}"
+  }), {params: { newColor: "white"}}),
+  transition('* <=> *', animate('400ms ease-in')), 
 ]);
 
 export const NAVBAR_SVG_EFFECT =
@@ -40,18 +64,22 @@ trigger('navbarSVGtrigger', [
     transform : 'translateY(-30%)',
     opacity: '0.8'
   })),
-  transition('notInReach <=> inReach', animate('150ms ease-in' )),
+  state('clicked', style({
+    transform : 'translateY(-100%)',
+    opacity: '0'
+  })),
+  transition('* <=> *', animate('150ms ease-in' )),
 ]);
 
 export const NAVBAR_STAGGER_BUTTONS =
 trigger('listAnimation', [
   transition('* => *', [
     // this hides everything right away
-    query('.col', style({ opacity: 0 })),
+    query('.col', style({ opacity: 0 , transform: 'translateY(-25%)'})),
     // starts to animate things with a stagger in between
     animate('2s'),
     query('.col', stagger('200ms', [
-      animate('0.1s', style({ opacity: 1 })),
+      animate('0.1s', style({ opacity: 1 , transform: 'translateY(0)'})),
     ]))
   ])
 ])
