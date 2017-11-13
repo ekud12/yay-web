@@ -19,23 +19,53 @@ trigger('fadeComponentTrigger', [
   transition('void <=> *', animate('.5s 600ms ease-in' )),
 ]);
 
+export const FOOTER_APPEAR_ANIMATION =
+trigger('popFooterTrigger', [
+  state('void', style({position: 'absolute',transform: 'translateY(500%)',opacity : '0.1'})),
+  state('*', style({position: 'absolute',transform: 'translateY(0)',opacity : '0.8'})),
+  transition('void <=> *', animate('1000ms ease-in')),
+]);
+
+
 export const NAVBAR_BUTTON_SELECTED =
 trigger('navbarButtonSelectedTrigger', [
   state('notSelected', style({})),
-  state('about', style({
-    borderBottom:'2px solid #38c3ff',
+  state('About', style({
+    borderBottom:'3px solid #38c3ff',
   })),
-  state('showcase', style({
-    borderBottom:'2px solid orange',
+  state('Showcase', style({
+    borderBottom:'3px solid orange',
   })),
-  state('pointer', style({
-    borderBottom:'2px solid yellow',
+  state('Pointer', style({
+    borderBottom:'3px solid #7d8200',
   })),
-  state('home', style({
-    borderBottom:'2px solid #39ffcd',
+  state('Home', style({
+    borderBottom:'3px solid #00934c',
   })),
-  state('profile', style({
-    borderBottom:'2px solid #ff366c',
+  state('Profile', style({
+    borderBottom:'3px solid #ff366c',
+  })),
+  transition('* <=> *', animate('400ms ease-in' )),
+]);
+
+
+export const NAVBAR_BUTTON_SELECTED_FOOTER =
+trigger('navbarButtonSelectedFooterTrigger', [
+  state('notSelected', style({})),
+  state('About', style({
+    borderTop:'2px solid #38c3ff',
+  })),
+  state('Showcase', style({
+    borderTop:'2px solid orange',
+  })),
+  state('Pointer', style({
+    borderTop:'2px solid #7d8200',
+  })),
+  state('Home', style({
+    borderTop:'2px solid #00934c',
+  })),
+  state('Profile', style({
+    borderTop:'2px solid #ff366c',
   })),
   transition('* <=> *', animate('400ms ease-in' )),
 ]);
@@ -84,6 +114,20 @@ trigger('listAnimation', [
   ])
 ])
 
+export const FOOTER_STAGGER_SOCIAL =
+trigger('listAnimation', [
+  transition('* => *', [
+    // this hides everything right away
+    query('.col', style({ opacity: 0 , transform: 'translateY(25%)'})),
+    // starts to animate things with a stagger in between
+    animate('2s'),
+    query('.col', stagger('200ms', [
+      animate('0.1s', style({ opacity: 1 , transform: 'translateY(0)'})),
+    ]))
+  ])
+])
+
+
 
 export const FADE_ANIMATION_BUTTON =
 trigger('fadeIntroButtonTrigger', [
@@ -107,20 +151,21 @@ trigger('fadeIntroButtonTrigger', [
 
 export const LOGO_LEFT_ANIMATION =
 trigger('logoLeftAnimationTrigger', [
-  state('Hovered', style({ transform: 'translateX(3%) translateY(-2%)',fill: '#FFA500'})),
-  state('notHovered', style({ transform: 'translateX(0)'})),
+  state('Hovered', style({ fill: 'rgb(208, 255, 0)'})),
+  state('notHovered', style({ fill: 'black'})),
   transition('notHovered <=> Hovered', animate('300ms ease-in'))
 ])
 
 export const LOGO_RIGHT_ANIMATION =
 trigger('logoRightAnimationTrigger', [
-  state('Hovered', style({ transform: 'translateX(-4%)',fill: '#FFA500'})),
-  state('notHovered', style({ transform: 'translateX(0)'})),
+  state('Hovered', style({ opacity: '1'})),
+  state('notHovered', style({ opacity: '1'})),
   transition('notHovered <=> Hovered', animate('300ms ease-in'))
 ])
+
 export const LOGO_BOTTOM_ANIMATION =
 trigger('logoBottomAnimationTrigger', [
-  state('Hovered', style({ transform: 'translateY(8%) translateX(1%)',fill: '#FFA500'})),
-  state('notHovered', style({ transform: 'translateY(0)'})),
+  state('Hovered', style({ transform: 'translateX(0)',opacity: 1})),
+  state('notHovered', style({ transform: 'translateX(-100%)',opacity: 0})),
   transition('notHovered <=> Hovered', animate('300ms ease-in'))
 ])

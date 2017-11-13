@@ -6,33 +6,32 @@ a{
   text-decoration: none !important;
 }
 .side-bar {
-  position: relative;
-  height: 8vh;
+  position: absolute;
+  height: 4vh;
   width: 100%;
   color:rgb(63, 63, 63);
-  background: url('../../../../assets/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
-  border-bottom: 0px solid rgba(255, 255, 255, 0.74);
+  background: url('../../../../../assets/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
+  background-color: rgb(235, 235, 235);   
+  border-top: 1px solid rgb(208, 255, 0);
   margin-left: 0px;
+  bottom: 0;
 }
-
+/* 
 .side-bar::after {
   z-index:-50;
   content: '';
   position: absolute;
   display: block;
   left: 0;
-  right: 0;
-  top: 100%;
-  bottom: 0;
   opacity: 1;
-  border-bottom: 3px solid rgb(208, 255, 0);
+  border-bottom: 3px solid rgb(255, 0, 0);
   -webkit-transform: scaleX(0.0001);
   -ms-transform: scaleX(0.0001);
   transform: scaleX(0.0001);
   animation: 1s cubic-bezier(.87,.14,.89,.73) 0.6s expand forwards;
   -moz-animation: 1s cubic-bezier(.87,.14,.89,.73) 0.6s expand forwards;
   -webkit-animation: 1s cubic-bezier(.87,.14,.89,.73) 0.6s expand forwards;
-}
+} */
 
 .side-bar::before {
   z-index: -10;
@@ -44,12 +43,13 @@ a{
   top: 0;
   bottom: 0;
   opacity: 0;
-  -webkit-box-shadow: 0px 1px 27px -2px rgba(0,0,0,0.83);
+  -webkit-box-shadow: 0px 1px 27px -2px rgba(58, 58, 58, 0.83);
   -moz-box-shadow: 0px 1px 27px -2px rgba(0,0,0,0.83);
   box-shadow: 0px 1px 27px -2px rgba(0,0,0,0.83);
   animation: 2s linear 1s opacityShadow forwards;
   -moz-animation: 2s linear 1s opacityShadow forwards;
   -webkit-animation: 2s linear 1s opacityShadow forwards;
+
 }
 
 
@@ -98,7 +98,7 @@ a{
   }
 }
 
-@-moz-keyframes opacityShadow {
+@-moz-keyframes expand {
   from {
     transform: scale(0.001);
   }
@@ -106,27 +106,3 @@ a{
     transform: scale(1);
   }
 } 
-
-.navcol {
-  height: 10vh;
-  -webkit-animation:ease-in .7s addClass forwards;
-  animation:ease-in .7s addClass forwards;
-}
-
-@keyframes addClass{
-  from {
-    color:transparent;
-  }
-  to {
-    color:purple;
-  }
-}
-
-@-webkit-keyframes addClass{
-  from {
-    color:transparent;
-  }
-  to {
-    color:purple;
-  }
-}

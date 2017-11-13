@@ -38,10 +38,10 @@ export class IntroComponent implements OnInit {
                   value: 200,
               },
               color: {
-                  value: '#ff870f'
+                  value: '#000000'
               },
               shape: {
-                  type: 'triangle'
+                  type: 'circle'
               },
               opacity: {
                 value: 0.55,

@@ -1,16 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../src/assets/bootstrap.min.css";
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Josefin+Sans|Righteous|Arvo');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Josefin+Sans|Kanit:700|Arvo');
 
 body {
   font:normal 75% Arial, Helvetica, sans-serif;
   min-height: 100vh;
   max-height: 100vh;
   overflow-y: hidden;
-  background: #616161;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #9bc5c3, #616161);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #9bc5c3, #616161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  /* background: #616161;  
+  background: -webkit-linear-gradient(to top, #9bc5c3, #616161);  
+  background: linear-gradient(to top, #9bc5c3, #616161);  */
+  background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-blend-mode: normal, lighten, soft-light;
+
   
   margin:0;
   padding:0;
@@ -18,7 +20,7 @@ body {
 }
 ::selection{
   color: black;
-  background-color: #ffb81f;
+  background-color: #b3b3b3;
 }
 
 

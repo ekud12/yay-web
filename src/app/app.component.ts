@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FADE_ANIMATION, FADE_ANIMATION_BUTTON } from '../app/shared/animations/animations';
+import { FADE_ANIMATION, FADE_ANIMATION_BUTTON, FOOTER_APPEAR_ANIMATION } from '../app/shared/animations/animations';
 import { Router } from '@angular/router';
 import { SharedRouterService } from '../app/routing/routerService';
 
@@ -7,7 +7,7 @@ import { SharedRouterService } from '../app/routing/routerService';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  animations: [ FADE_ANIMATION, FADE_ANIMATION_BUTTON ]
+  animations: [ FADE_ANIMATION, FADE_ANIMATION_BUTTON,FOOTER_APPEAR_ANIMATION ]
 })
 export class AppComponent implements OnInit {
 

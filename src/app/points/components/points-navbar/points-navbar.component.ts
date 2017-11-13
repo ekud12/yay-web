@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, EventEmitter, Output } from '@angular/core';
 import { FADE_ANIMATION ,NAVBAR_STAGGER_BUTTONS, NAVBAR_BUTTON_SELECTED} from '../../../shared/animations/animations';
 import { Router } from '@angular/router';
 
@@ -13,12 +13,13 @@ export class PointsSideBarComponent implements OnInit {
   buttons  = [{text:'About',color:'#38c3ff'},
               {text:'Profile',color:'#ff366c'},
               {text:'Showcase',color:'orange'},
-              {text:'Pointer',color:'yellow'},
-              {text:'Home',color:'#39ffcd'}];
+              {text:'Pointer',color:'#7d8200'},
+              {text:'Home',color:'#00934c'}];
   id = 0;
   particlesStyle: object = {};
   particlesParams: object = {};
   buttonClicked = 'notSelected';
+  @Output() currentButtonStyle: EventEmitter<string> = new EventEmitter();
 
   constructor(private router: Router) { }
 
@@ -123,5 +124,6 @@ export class PointsSideBarComponent implements OnInit {
       redirect(a: any){
       this.id = a.text;
       this.buttonClicked = a.text;
+      this.currentButtonStyle.emit(a.text);
     }
   }

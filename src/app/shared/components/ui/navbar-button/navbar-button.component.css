@@ -3,12 +3,10 @@
   cursor: pointer;
   height: 50px;
   font-size: 18px;
-  font-family: 'Arvo', serif;
+  font-family: 'Kanit', serif;
   color: rgb(102, 102, 102);
   justify-content: center;
   /* padding-top: 15px; */
-
-
 }
 
 .iconx .svg {
